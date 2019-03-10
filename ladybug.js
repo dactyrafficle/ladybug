@@ -56,28 +56,28 @@ myButton.addEventListener('click', function() {
 });
 */
 
-/* 1. display the map */
+// 1. display the map
 
+// no great mystery here, it is my access code which is now clearly public
 mapboxgl.accessToken = 'pk.eyJ1IjoicnRob21hc2lhbiIsImEiOiJjamY5NWt1MWIwZXBxMnFxb3N6NHphdHN3In0.p80Ttn1Zyoaqk-pXjMV8XA';
 
-// this bit of code will add the map itself to my webpage
-// i should only have to run this bit once
+// this bit of code will add the map itself to the webpage
 var map = new mapboxgl.Map({
 
-  // container id specified in the HTML
+  // container id specified in the html
   container: 'map',
   
-  // style URL
-  style: 'mapbox://styles/mapbox/dark-v9', //light-v9; dark-v9; streets-v10
+  // style url
+  style: 'mapbox://styles/mapbox/dark-v9', // other options: light-v9; dark-v9; streets-v10
   
   // initial position in [lon, lat] format
-  center: [-95.7129, 37.0902], // Hamilton, ON [-79.8711, 43.2557], US [-95.7129, 37.0902]
+  center: [-95.7129, 37.0902], // Hamilton, ON [-79.8711, 43.2557]; US [-95.7129, 37.0902]
   
   // initial zoom
   zoom: 3
 });
 
-/* 2. define locations array as a global array which will be populated from localstorage or an upload or left blank */
+// 2. define locations array as a global array which will be populated from localstorage or an upload or left blank */
 
 var locations = [];
 
