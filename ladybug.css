@@ -1,0 +1,111 @@
+
+/* the main bits */
+.map {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+.sidebar {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 25%;
+  top: 0;
+  bottom: 300px; /* this means it takes up the full height of the window, its parents element */
+  overflow: hidden; /* intelligent move */
+  border-right: 1px solid rgba(0, 0, 0, 0.25); /* good choice of color */
+  font-family: Calibri, Helvetica, sans-serif;
+}
+input[type='file'], button {
+  font-family: Calibri, Helvetica, sans-serif;
+}
+
+/* from here we concern ourselves with the sidebar and its contents */
+.uploadBox {
+  background-color: rgba(50, 50, 50, 1);
+  border: 1px solid #dddddd;
+  position: absolute;
+  top: 0;
+  height: 120px;
+  width: 100%;
+  padding: 0 10px;
+  overflow: hidden;
+}
+.heading {
+  background-color: rgba(204,188,165, 1);
+  border-bottom: 1px solid rgb(0, 0, 0);
+  padding: 0 10px;
+  position: absolute;
+  top: 120px;
+  height: 50px;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* the listing class will house all elements of class item, which are added thru js */
+.listings {
+  background-color: rgba(192, 192, 192, 0.6);
+  border-top: 1px solid #dddddd;
+  position: absolute;
+  top: 170px;
+  bottom: 0;
+  width: 100%;
+  overflow: auto;
+}
+
+/* each item div is a sub div of listings */
+.listings .item {
+  display: block; /* takes up the whole width */
+  border-bottom: 1px solid #eee;
+  padding: 10px;
+  text-decoration: none;
+}
+
+/* this is also an interesting line: the last .item wont have a bottom border */
+.listings .item:last-child {
+ border-bottom: none;
+}
+
+.listings .item .title {
+  display: block;
+  color: rgb(35,75,195);
+  font-weight: 700;
+}
+
+.listings .item .title small { font-weight: 400; }
+
+
+.listings .item .title:hover {
+ color: #689eb8; // #8cc63f;
+}
+
+
+.pink {
+ color: rgba(255,110,199); /* #4d5531; */
+ font-weight: bold;
+}
+.infoTable {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  bottom: 0;
+  z-index: 1;
+  background-color: #ffffff;
+  background-color: rgba(170,170,170, 0.65);
+  overflow: auto;
+}
+.infoTable table {
+	width: 90%;
+	background-color: rgba(0, 255, 0, 0.65);
+	border-collapse: collapse;
+}
+.infoTable  table, tr, td {
+	margin: 6px;
+	padding: 3px;
+	border: 1px solid #dddddd;
+	font-size: 13px;
+	font-family: monospace;
+}
