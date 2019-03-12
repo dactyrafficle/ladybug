@@ -10,33 +10,21 @@
 	
 </head>
 
-
 <body>
 
 	<div id='map' class='map'></div>
 
-	<div class='sidebar' id='sidebar' style=''>
-
-		<div id='uploadBox' class='uploadBox'>
-			<p> You can <span class='pink'>upload</span> a csv file.</p>
-			<input type='file' id='myInput' multiple></input>
-			<p>Filename: <span class='pink' id='filename'></span></p>
-		</div>
-
-		<div class='heading'>
-			<div style="display: table; height: 100%; overflow: hidden;">
-				<div style="display: table-cell; vertical-align: middle;">
-					<div style='font-size: 20px; font-weight: bold;'>
-						<button id='deleteLocalStorageData'>remove data</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<div id='listings' class='listings'></div>
-
+	<div class='hamburger-container' id='hamburger-container'>
+		<div class='hamburger-contents'></div>
+		<div class='hamburger-contents'></div>
+		<div class='hamburger-contents'></div>
 	</div>
-
+	
+	<div id='modal' class='modal'>
+		<h4> You can <span class='pink'>upload</span> a csv file.</h4>
+		<input type='file' id='myInput' multiple></input><br><br>
+		<button id='deleteLocalStorageDataButton'>remove data</button>
+	</div>
 	
 </body>
 

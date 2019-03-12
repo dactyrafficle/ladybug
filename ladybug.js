@@ -1,8 +1,14 @@
+/* 
+	1. global variables + setup
+	2. event listeners
+	3. function definitions
+*/
+
 
 // this array contains the lat-lon data which will be plotted and is populated either from localStorage or an uploaded csv or remain empty
 var locations = [];
 
-// 1. display the map
+// display the map
 mapboxgl.accessToken = 'pk.eyJ1IjoicnRob21hc2lhbiIsImEiOiJjamY5NWt1MWIwZXBxMnFxb3N6NHphdHN3In0.p80Ttn1Zyoaqk-pXjMV8XA';
 var map = new mapboxgl.Map({
   container: 'map',
@@ -13,10 +19,54 @@ var map = new mapboxgl.Map({
 
 ifLocalStorageContainsDataThenSetLocationsArrayAndAddLayer();
 
-document.getElementById('deleteLocalStorageData').addEventListener('click', function() {
+// event listeners
+
+document.getElementById('deleteLocalStorageDataButton').addEventListener('click', function() {
 	localStorage.earthquakes = '';
 	locations = [];
 	resetTheDataLayer();
+});
+
+var modal = document.getElementById('modal');
+document.getElementById('hamburger-container').addEventListener('click', function() {
+	if (modal.style.display === 'block') {
+		modal.style.display = 'none';
+	} else {
+		modal.style.display = 'block';
+	}
+});
+
+var input = document.getElementById('myInput');
+input.addEventListener('change', function(e) {
+  
+  var myFile = e.target.files[0];
+	
+  // 1. make a fileReader object
+  var reader = new FileReader();
+
+  // 2. we define what happens when the fileReader is done reading something
+  reader.addEventListener('load', function(e) {
+  
+	// grab the contents of the csv file as a string
+	var fileContentAsCSVString = e.target.result; // e.target.result is fine bc that terminology is unique to the load event
+
+	// save in localStorage
+	localStorage.earthquakes = fileContentAsCSVString;
+
+	// convert the csv string to an array
+	var arr = convertCSVFileIntoArray(fileContentAsCSVString);
+
+	// convert the array to a geojson object
+	locations = convertArrayIntoGeoJsonObject(arr);
+	
+	resetTheDataLayer();  // if existing data; remove it
+	addMyLayerToTheMap();	// add the new layer (via locations array)
+	
+  }, false); 
+
+  // 3. use the fileReader object to read the file, and return a string
+  reader.readAsText(myFile); 
+
 });
 
 
@@ -53,59 +103,9 @@ function ifLocalStorageContainsDataThenSetLocationsArrayAndAddLayer() {
 		locations = convertArrayIntoGeoJsonObject(arr);
 		map.on('load', function(e) {
 			addMyLayerToTheMap();
-			//createLocationListInSidebar(locations);
 		});
 	}
 }
-
-var input = document.getElementById('myInput');
-input.addEventListener('change', function(e) {
-  //console.log(e);
-  
-  var myFile = e.target.files[0];
-  console.log(myFile);
-    
-  document.getElementById('filename').textContent = myFile.name;
-
-  // 1. make a fileReader object
-  var reader = new FileReader();
-
-  // 2. we define what happens when the fileReader is done reading something
-  reader.addEventListener('load', function(e) {
-  
-	// grab the contents of the csv file as a string
-  
-    var fileContentAsCSVString = e.target.result; // e.target.result is fine bc that terminology is unique to the load event
-	
-	// 2018-10-20-1737: now that i have the csv string, i can save it to localStorage
-	
-	localStorage.earthquakes = fileContentAsCSVString;
-	
-	// convert the csv string to an array
-	
-    var arr = convertCSVFileIntoArray(fileContentAsCSVString);
-	
-	// convert the array to a geojson object
-	
-	locations = convertArrayIntoGeoJsonObject(arr);
-	
-    // now the locations array is updated with the correct data
-	
-	resetTheDataLayer();
-	
-	addMyLayerToTheMap();
-	
-	// naturally, this next function will update the sidebar
-	
-	//createLocationListInSidebar(locations);
-	
-  }, false); 
-
-  // 3. use the fileReader object to read the file, and return a string
-  reader.readAsText(myFile); 
-
-});
-
 
 // routine to convert a csv file into an array
 function convertCSVFileIntoArray(CSVString) {
@@ -122,34 +122,29 @@ function convertCSVFileIntoArray(CSVString) {
   
   var numberOfRows = data.length;
   
-  var numberOfRowsWithout18Elements = 0;
-  for (var i = 0; i < data.length; i++) {
-    // x is a single row of data but in array format
-    var x = data[i].split(/,/);
-	data[i] = x;
-    totalEntities += x.length;
-	entities.push(x.length);
-    if (x.length !== 18) { // i want to know all the rows that do not have 18 elements (the only acceptable one is the last one)
-	  numberOfRowsWithout18Elements++;
-      console.log(x);
-    }
-  }
-  //console.log(entities);
+	var numberOfRowsWithout18Elements = 0;
+	for (var i = 0; i < data.length; i++) {
+		// x is a single row of data but in array format
+		var x = data[i].split(/,/);
+		data[i] = x;
+		totalEntities += x.length;
+		entities.push(x.length);
+		if (x.length !== 18) { // spleen
+			numberOfRowsWithout18Elements++;
+			console.log(x);
+		}
+	}
+	// spleen code
   console.log('number of rows without 18 elements: ' + numberOfRowsWithout18Elements);
-  
   console.log('number of elements: ' + totalEntities);
   console.log('number of rows: ' + numberOfRows);
 
   var elementsPerRow = totalEntities/numberOfRows;
   
-  // now that i have the avg, i can find the variance
-  
   var ss = 0;
   for (var i = 0; i < entities; i++) {
-	ss += Math.sq(entities[i] - elementsPerRow);
+		ss += Math.sq(entities[i] - elementsPerRow);
   }
-  
-  console.log('Each row must have 18 elements, so I am taking the mean and the variance of the number of elements per row. So this means the mean has to be 18, and the variance has to be 0. I am using the sum of squares instead since it shows the same thing');
   console.log('mean: ' + elementsPerRow);
   console.log('ss: ' + ss);
   
@@ -219,6 +214,5 @@ function resetTheDataLayer() {
 		map.removeSource('highlights');	 
 	}
 }
-
 
 
