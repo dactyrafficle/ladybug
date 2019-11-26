@@ -93,6 +93,56 @@ function addMyLayerToTheMap() {
 			'circle-opacity': 0.6
 		}
 	});
+	
+	
+	map.addLayer({
+		id: 'textLabels',
+		type: 'symbol',
+		source: {
+			type: 'geojson',
+			data: locations  // the name of the array where the data is coming from
+		},
+		layout: {
+			"text-field": ["get", "ar"],
+			//"text-variable-anchor": ["top", "bottom", "left", "right"],
+			//"text-radial-offset": 0.5,
+			//"text-justify": "auto",
+			//"icon-image": ["concat", ["get", "icon"], "-15"]
+			//"text-font": ["DIN Offc Pro Medium", "Arial Unicode MS Bold"],
+			"text-size": 24
+		},
+		paint: {
+			"text-color": "#ffccff"
+		}
+	});
+
+	// to add text
+	/*
+	map.addLayer({
+		id: 'labels',
+		type: 'circle',
+		source: {
+			type: 'geojson',
+			data: locations  // the name of the array where the data is coming from
+		},
+		layout: {
+			visibility: 'visible'
+		}
+	});
+	*/
+	//map.setLayoutProperty('locations', 'text-field', 'locations')
+	
+	/*
+	['format',
+	['get', 'ar'], { 'font-scale': 1.2 },
+	'\n', {},
+	['get', 'ar'], {
+	'font-scale': 0.8,
+	'text-font': ['literal', [ 'DIN Offc Pro Italic', 'Arial Unicode MS Regular' ]]
+	}
+	]);	
+	*/
+	
 };
 
 // routine to check localStorage for data
@@ -201,6 +251,7 @@ function convertArrayIntoGeoJsonObject(arr) {
   // inside the for loop, push the object a into the obj object
   obj.features.push(a);
   }
+	console.log(obj);
   return obj;
 }
 
