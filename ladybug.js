@@ -193,11 +193,10 @@ function convertCSVFileIntoArray(CSVString) {
   
   var ss = 0;
   for (var i = 0; i < entities; i++) {
-		ss += Math.sq(entities[i] - elementsPerRow);
+    ss += Math.sq(entities[i] - elementsPerRow);
   }
   console.log('mean: ' + elementsPerRow);
-  console.log('ss: ' + ss);
-  
+  console.log('ss: ' + ss); 
   return data;
 }
 
@@ -220,50 +219,54 @@ function convertArrayIntoGeoJsonObject(arr) {
   // start iterating from 1 bc data[0] is a header row
   for (var i = 1; i < arr.length; i++) {
     var a = {
-			'type': 'Feature',
-			'id': i-1,  // added this as part of step 13
+	'type': 'Feature',
+	'id': i-1,  // added this as part of step 13
       'geometry': {
         'type': 'Point',
         'coordinates': [
-					arr[i][1],
-					arr[i][0]
-				]
+		arr[i][1],
+		arr[i][0]
+		]
       },
-			'properties': {
-			'rowId': i-1,
-			'ar': arr[i][2],
-			'name': arr[i][3],
-			'order': arr[i][2],
-			'orderDate': arr[i][3],
-			'displays': arr[i][4],
-			'cases': arr[i][5],
-			'totalPieces': arr[i][6],
-			'netWeight': arr[i][7],
-			'grossWeight': arr[i][8],
-			'relativeCube': arr[i][9],
-			'address1': arr[i][10],
-			'address2': arr[i][11],
-			'city': arr[i][12],
-			'state': arr[i][13]
+	'properties': {
+	'rowId': i-1,
+	'ar': arr[i][2],
+	'name': arr[i][3],
+	'order': arr[i][2],
+	'orderDate': arr[i][3],
+	'displays': arr[i][4],
+	'cases': arr[i][5],
+	'totalPieces': arr[i][6],
+	'netWeight': arr[i][7],
+	'grossWeight': arr[i][8],
+	'relativeCube': arr[i][9],
+	'address1': arr[i][10],
+	'address2': arr[i][11],
+	'city': arr[i][12],
+	'state': arr[i][13]
       }
     }
   
   // inside the for loop, push the object a into the obj object
   obj.features.push(a);
   }
-	console.log(obj);
+  console.log(obj);
   return obj;
 }
 
 function resetTheDataLayer() {
-	if (map.getSource('locations') && map.getLayer('locations')) {
-		map.removeLayer('locations');
-		map.removeSource('locations');	 
-	}
-	if (map.getSource('highlights') && map.getLayer('highlights')) {
-		map.removeLayer('highlights');
-		map.removeSource('highlights');	 
-	}
+  if (map.getSource('locations') && map.getLayer('locations')) {
+    map.removeLayer('locations');
+    map.removeSource('locations');	 
+  }
+  if (map.getSource('highlights') && map.getLayer('highlights')) {
+    map.removeLayer('highlights');
+    map.removeSource('highlights');	 
+  }
+  if (map.getSource('textLabels') && map.getLayer('textLabels')) {
+    map.removeLayer('textLabels');
+    map.removeSource('textLabels');	 
+  }
 }
 
 
