@@ -10,7 +10,7 @@ The North Pole has a latitude of 90 degrees.
 The Equator has a latitude of 0 degrees.
 The South Pole has a latitude of -90 degrees.
 
-![](latitude.png)
+![](images/latitude.png)
 
 Longitude goes from -180 to 180 degrees.
 
