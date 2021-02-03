@@ -1,26 +1,28 @@
-lat,lon,x,y
-27.5036,-99.5076,Laredo,Texas
-31.7619,-106.485,El Paso,Texas
-32.7157,-117.1611,San Diego,California
-33.8317,-118.2817,Carson,California
-40.5187,-74.4121,Edison,New Jersey
-47.2393,-122.3571,Fife,Washington
-18.4655,-66.1057,San Juan,Puerto Rico
-35.1495,-90.049,Memphis,Tennessee
-39.5718,-75.4671,Salem,New Jersey
-53.4084,-2.9916,Liverpool,UK
-43.1198,131.8869,Vladivostock,Russia
-39.9526,-75.1652,Philadelphia,Pennsylvania
-44.6473,-63.6078,Halifax,Nova Scotia
--4.0435,39.6682,Mombasa,Kenya
-5.7348,-0.0302,Tema,Ghana
-1.3521,103.8198,Singapore,Singapore
-22.3193,114.1694,Hong Kong,Hong Kong
-39.9042,116.4074,Beijing,China
-23.6978,120.9605,Taiwan,Taiwan
-29.1383,-80.9956,Port Orange,Florida
-38.7647,-95.008,Edgerton,Kansas
-38.9536,-94.7336,Lenexa,Kansas
-43.3255,-79.799,Burlington,Ontario
-43.2557,-79.8711,Hamilton,Ontario
-42.312,-83.0743,Ambassador Bridge,Ontario
+lat,lon,name1,name2,name3,name4,name5
+27.5036,-99.5076,Laredo,Texas,Texas,Texas,Texas
+31.7619,-106.485,El Paso,Texas,Texas,Texas,Texas
+32.7157,-117.1611,San Diego,California,California,California,California
+33.8317,-118.2817,Carson,California,California,California,California
+40.5187,-74.4121,Edison,New Jersey,New Jersey,New Jersey,New Jersey
+47.2393,-122.3571,Fife,Washington,Washington,Washington,Washington
+18.4655,-66.1057,San Juan,Puerto Rico,Puerto Rico,Puerto Rico,Puerto Rico
+35.1495,-90.049,Memphis,Tennessee,Tennessee,Tennessee,Tennessee
+39.5718,-75.4671,Salem,New Jersey,New Jersey,New Jersey,New Jersey
+53.4084,-2.9916,Liverpool,UK,UK,UK,UK
+43.1198,131.8869,Vladivostock,Russia,Russia,Russia,Russia
+39.9526,-75.1652,Philadelphia,Pennsylvania,Pennsylvania,Pennsylvania,Pennsylvania
+44.6473,-63.6078,Halifax,Nova Scotia,Nova Scotia,Nova Scotia,Nova Scotia
+-4.0435,39.6682,Mombasa,Kenya,Kenya,Kenya,Kenya
+5.7348,-0.0302,Tema,Ghana,Ghana,Ghana,Ghana
+1.3521,103.8198,Singapore,Singapore,Singapore,Singapore,Singapore
+22.3193,114.1694,Hong Kong,Hong Kong,Hong Kong,Hong Kong,Hong Kong
+39.9042,116.4074,Beijing,China,China,China,China
+23.6978,120.9605,Taiwan,Taiwan,Taiwan,Taiwan,Taiwan
+29.1383,-80.9956,Port Orange,Florida,Florida,Florida,Florida
+38.7647,-95.008,Edgerton,Kansas,Kansas,Kansas,Kansas
+38.9536,-94.7336,Lenexa,Kansas,Kansas,Kansas,Kansas
+43.3255,-79.799,Burlington,Ontario,Ontario,Ontario,Ontario
+43.2557,-79.8711,Hamilton,Ontario,Ontario,Ontario,Ontario
+42.312,-83.0743,Ambassador Bridge,Ontario,Ontario,Ontario,Ontario
+43.7082,-79.6715,Malport Yard CN 7675 Torbram Road,Ontario,Ontario,Ontario,Ontario
+43.698,-79.6743,CN Rail Mississauga 7505 Bramalea Road,Ontario,Ontario,Ontario,Ontario
