@@ -22,25 +22,33 @@
   height: 5px;
   margin: 6px 0;
 	border-radius: 5px;
-	background-color: rgba(255,110,199);
+	background-color: #fcf;
 }
 
 /* the modal and its contents */
 .modal {
 	position: absolute;
 	z-index: 0;
-  background-color: rgba(50, 50, 50, 1);
-  border: 1px solid #dddddd;
+  background-color: rgba(68, 68, 68, 0.7);
+  border: 1px solid #222;
   position: absolute;
 	top: 50px;
-  width: 300px;
   padding: 10px;
   overflow: hidden;
 	display: none;
 }
+.outer {
+  display: table-cell;
+  vertical-align: middle;
+  height: 350px;
+  width: 350px;
+}
+.inner {
+  display: inline-block;
+}
 .pink {
- color: rgba(255,110,199); /* #4d5531; */
- font-weight: bold;
+  color: #fcf; /* #4d5531; */
+  font-weight: bold;
 }
 input[type='file'], button {
   font-family: Calibri, Helvetica, sans-serif;

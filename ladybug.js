@@ -6,18 +6,20 @@
 
 
 // this array contains the lat-lon data which will be plotted and is populated either from localStorage or an uploaded csv or remain empty
-var locations = [];
+//var locations = [];
 
 // display the map
 mapboxgl.accessToken = 'pk.eyJ1IjoicnRob21hc2lhbiIsImEiOiJjamY5NWt1MWIwZXBxMnFxb3N6NHphdHN3In0.p80Ttn1Zyoaqk-pXjMV8XA';
-var map = new mapboxgl.Map({
+let map = new mapboxgl.Map({
   container: 'map',
   style: 'mapbox://styles/mapbox/dark-v9', // other choices: light-v9; dark-v9; streets-v10
   center: [-95.7129, 37.0902], // Hamilton, ON [-79.8711, 43.2557], US [-95.7129, 37.0902]
   zoom: 3
 });
 
-ifLocalStorageContainsDataThenSetLocationsArrayAndAddLayer();
+//ifLocalStorageContainsDataThenSetLocationsArrayAndAddLayer();
+
+if_localStorage_contains_data_set_data();
 
 // event listeners
 
@@ -27,7 +29,8 @@ document.getElementById('deleteLocalStorageDataButton').addEventListener('click'
 	resetTheDataLayer();
 });
 
-var modal = document.getElementById('modal');
+
+
 document.getElementById('hamburger-container').addEventListener('click', function() {
 	if (modal.style.display === 'block') {
 		modal.style.display = 'none';
@@ -51,16 +54,16 @@ input.addEventListener('change', function(e) {
 	var fileContentAsCSVString = e.target.result; // e.target.result is fine bc that terminology is unique to the load event
 
 	// save in localStorage
-	localStorage.earthquakes = fileContentAsCSVString;
+	//localStorage.earthquakes = fileContentAsCSVString;
 
 	// convert the csv string to an array
-	var arr = convertCSVFileIntoArray(fileContentAsCSVString);
+	//var arr = convertCSVFileIntoArray(fileContentAsCSVString);
 
 	// convert the array to a geojson object
-	locations = convertArrayIntoGeoJsonObject(arr);
+	//let my_geojson_obj = convertArrayIntoGeoJsonObject(arr);
 	
-	resetTheDataLayer();  // if existing data; remove it
-	addMyLayerToTheMap();	// add the new layer (via locations array)
+	//resetTheDataLayer();  // if existing data; remove it
+	//addMyLayerToTheMap(my_geojson_obj);	// add the new layer (via locations array)
 	
   }, false); 
 
@@ -69,17 +72,76 @@ input.addEventListener('change', function(e) {
 
 });
 
+// drag and drop
+
+let container = document.getElementById('modal');
+
+// dragenter event listener
+container.addEventListener('dragenter', function(e) {
+  e.stopPropagation();
+  e.preventDefault();
+  this.style.border = '1px solid #ddd';
+}, false);
+
+// dragover event listener
+container.addEventListener('dragover', function(e) {
+  e.stopPropagation();
+  e.preventDefault();
+  this.style.border = '1px solid #ddd';
+}, false);
+
+// dragleave event listener
+container.addEventListener('dragleave', function(e) {
+  e.stopPropagation();
+  e.preventDefault();
+  this.style.border = '1px solid #222';
+}, false);
+
+container.addEventListener('drop', function(e) {
+  e.stopPropagation();
+  e.preventDefault();
+  this.style.border = '1px solid #222';  
+
+  /* 1. make a fileReader object */
+  var reader = new FileReader();
+    
+  /* 2. we define what happens when the fileReader is done reading something */
+  reader.addEventListener('load', function(e) {
+    
+    // returns a csv string
+    let file_content_as_text = e.target.result;
+    
+    localStorage.ladybug_data = file_content_as_text;
+    
+    // returns an array of objects
+    let arr = csv_string_to_array_of_objects(file_content_as_text);
+    console.log(arr);
+    
+    // returns a geojson obj
+    let my_geojson_obj = arr_of_objects_into_geojson_object(arr);
+    console.log(my_geojson_obj);
+    
+    reset_the_data_layer();
+    add_my_layer_to_the_map(my_geojson_obj);	
+    
+    
+  }, false); 
+
+  /* 3. use the fileReader object to read the file, and return a string */
+  reader.readAsText(e.dataTransfer.files[0]); 
+
+ }, false);
 
 // function definitions below:
 
 // this function will add a layer [an array of geojson data] to the map
-function addMyLayerToTheMap() {
+function add_my_layer_to_the_map(my_geojson_obj) {
 	map.addLayer({
 		id: 'locations',
 		type: 'circle',
 		source: {
 			type: 'geojson',
-			data: locations  // the name of the array where the data is coming from
+			data: my_geojson_obj  // the name of the array where the data is coming from
 		},
 		layout: {
 			visibility: 'visible'
@@ -100,16 +162,20 @@ function addMyLayerToTheMap() {
 		type: 'symbol',
 		source: {
 			type: 'geojson',
-			data: locations  // the name of the array where the data is coming from
+			data: my_geojson_obj  // the name of the array where the data is coming from
 		},
 		layout: {
-			"text-field": ["get", "ar"],
+			//"text-field": ["get", "name1"],
+      "text-field": ["format",
+        ["get","name1"], {"font-scale":1.0}
+        //["get","name2"], {"font-scale":0.6}
+      ],
 			//"text-variable-anchor": ["top", "bottom", "left", "right"],
 			//"text-radial-offset": 0.5,
 			//"text-justify": "auto",
 			//"icon-image": ["concat", ["get", "icon"], "-15"]
 			//"text-font": ["DIN Offc Pro Medium", "Arial Unicode MS Bold"],
-			"text-size": 24
+			"text-size": 20
 		},
 		paint: {
 			"text-color": "#ffccff"
@@ -142,67 +208,64 @@ function addMyLayerToTheMap() {
 	}
 	]);	
 	*/
+
 	
 };
 
 // routine to check localStorage for data
-function ifLocalStorageContainsDataThenSetLocationsArrayAndAddLayer() {
-	if (localStorage.earthquakes) {
-		var fileContentAsCSVString = localStorage.earthquakes;
-		var arr = convertCSVFileIntoArray(fileContentAsCSVString);
-		locations = convertArrayIntoGeoJsonObject(arr);
+function if_localStorage_contains_data_set_data() {
+	if (localStorage.ladybug_data) {
+		let file_content_as_text = localStorage.ladybug_data;
+    let arr = csv_string_to_array_of_objects(file_content_as_text);
+    let my_geojson_obj = arr_of_objects_into_geojson_object(arr);
+    console.log(my_geojson_obj);
+
 		map.on('load', function(e) {
-			addMyLayerToTheMap();
+      reset_the_data_layer();
+      add_my_layer_to_the_map(my_geojson_obj);
 		});
 	}
 }
 
-// routine to convert a csv file into an array
-function convertCSVFileIntoArray(CSVString) {
 
-  // convert CSV string to an array of strings
-  var data = CSVString.split(/\n/);
-  data.splice(data.length-1, 1);
-  // now the data array contains as many elements as we have rows in our data
-  // data[0] will contain headers
 
-  var totalEntities = 0;
-  
-  var entities = [];
-  
-  var numberOfRows = data.length;
-  
-	var numberOfRowsWithout18Elements = 0;
-	for (var i = 0; i < data.length; i++) {
-		// x is a single row of data but in array format
-		var x = data[i].split(/,/);
-		data[i] = x;
-		totalEntities += x.length;
-		entities.push(x.length);
-		if (x.length !== 18) { // spleen
-			numberOfRowsWithout18Elements++;
-			console.log(x);
-		}
-	}
-	// spleen code
-  console.log('number of rows without 18 elements: ' + numberOfRowsWithout18Elements);
-  console.log('number of elements: ' + totalEntities);
-  console.log('number of rows: ' + numberOfRows);
-
-  var elementsPerRow = totalEntities/numberOfRows;
-  
-  var ss = 0;
-  for (var i = 0; i < entities; i++) {
-    ss += Math.sq(entities[i] - elementsPerRow);
+function reset_the_data_layer() {
+  if (map.getSource('locations') && map.getLayer('locations')) {
+    map.removeLayer('locations');
+    map.removeSource('locations');	 
   }
-  console.log('mean: ' + elementsPerRow);
-  console.log('ss: ' + ss); 
-  return data;
+  if (map.getSource('textLabels') && map.getLayer('textLabels')) {
+    map.removeLayer('textLabels');
+    map.removeSource('textLabels');	 
+  }
 }
 
-// convert array into geojson object
-function convertArrayIntoGeoJsonObject(arr) {
-  var obj = {
+function csv_string_to_array_of_objects(csv_string) {
+  var data = csv_string.split(/\n/);
+  let rows = [];
+  
+  for (let i = 0; i < data.length; i++) {
+    let row = data[i].split(/,/);
+    rows.push(row);
+  }
+  
+  let arr = [];
+  for (let i = 1; i < rows.length; i++) {
+    let obj = {};
+    obj[rows[0][0]] = rows[i][0];
+    obj[rows[0][1]] = rows[i][1];
+    obj[rows[0][2]] = rows[i][2];
+    obj[rows[0][3]] = rows[i][3];
+    obj[rows[0][4]] = rows[i][4];
+    obj[rows[0][5]] = rows[i][5];
+    arr.push(obj);
+  }
+  
+  return arr;
+}
+
+function arr_of_objects_into_geojson_object(arr) {
+  let obj = {
     'type': 'FeatureCollection',
     'features': []
   };
@@ -215,58 +278,30 @@ function convertArrayIntoGeoJsonObject(arr) {
 		 2. geometry
 		 3. properties
 	*/
-	console.log('convertArrayIntoGeoJsonObject');
+
   // start iterating from 1 bc data[0] is a header row
-  for (var i = 1; i < arr.length; i++) {
-    var a = {
-	'type': 'Feature',
-	'id': i-1,  // added this as part of step 13
+  for (var i = 0; i < arr.length; i++) {
+    let a = {
+      'type': 'Feature',
+      'id': i,  // added this as part of step 13
       'geometry': {
         'type': 'Point',
         'coordinates': [
-		arr[i][1],
-		arr[i][0]
-		]
+          arr[i].lon,
+          arr[i].lat
+        ]
       },
-	'properties': {
-	'rowId': i-1,
-	'ar': arr[i][2],
-	'name': arr[i][3],
-	'order': arr[i][2],
-	'orderDate': arr[i][3],
-	'displays': arr[i][4],
-	'cases': arr[i][5],
-	'totalPieces': arr[i][6],
-	'netWeight': arr[i][7],
-	'grossWeight': arr[i][8],
-	'relativeCube': arr[i][9],
-	'address1': arr[i][10],
-	'address2': arr[i][11],
-	'city': arr[i][12],
-	'state': arr[i][13]
+      'properties': {
+        'rowId': i,
+        'name1': arr[i].name1,
+        'name2': arr[i].name2,
+        'name3': arr[i].name3
       }
     }
-  
-  // inside the for loop, push the object a into the obj object
-  obj.features.push(a);
+    // inside the for loop, push the object a into the obj object
+    obj.features.push(a);
   }
-  console.log(obj);
   return obj;
-}
-
-function resetTheDataLayer() {
-  if (map.getSource('locations') && map.getLayer('locations')) {
-    map.removeLayer('locations');
-    map.removeSource('locations');	 
-  }
-  if (map.getSource('highlights') && map.getLayer('highlights')) {
-    map.removeLayer('highlights');
-    map.removeSource('highlights');	 
-  }
-  if (map.getSource('textLabels') && map.getLayer('textLabels')) {
-    map.removeLayer('textLabels');
-    map.removeSource('textLabels');	 
-  }
 }
 
 
