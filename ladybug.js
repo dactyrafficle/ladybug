@@ -72,6 +72,8 @@ input.addEventListener('change', function(e) {
 
 });
 
+
+
 // drag and drop
 
 let container = document.getElementById('modal');
@@ -98,28 +100,31 @@ container.addEventListener('dragleave', function(e) {
 }, false);
 
 container.addEventListener('drop', function(e) {
+  
   e.stopPropagation();
   e.preventDefault();
   this.style.border = '1px solid #222';  
 
   /* 1. make a fileReader object */
-  var reader = new FileReader();
+  let reader = new FileReader();
     
   /* 2. we define what happens when the fileReader is done reading something */
   reader.addEventListener('load', function(e) {
     
     // returns a csv string
-    let file_content_as_text = e.target.result;
+    let file_contents_as_text = e.target.result;
+    // console.log(file_contents_as_text);  // the uploaded csv file
     
-    localStorage.ladybug_data = file_content_as_text;
+    
+    localStorage.ladybug_data = file_contents_as_text;
     
     // returns an array of objects
-    let arr = csv_string_to_array_of_objects(file_content_as_text);
-    console.log(arr);
+    let arr = csv_string_to_js_array_of_objects(file_contents_as_text);
+    // console.log(arr);  // the parsed js array of objects
     
     // returns a geojson obj
-    let my_geojson_obj = arr_of_objects_into_geojson_object(arr);
-    console.log(my_geojson_obj);
+    let my_geojson_obj = js_arr_of_objects_into_geojson_object(arr);
+    console.log(my_geojson_obj);  // the geojson object
     
     reset_the_data_layer();
     add_my_layer_to_the_map(my_geojson_obj);	
@@ -212,12 +217,13 @@ function add_my_layer_to_the_map(my_geojson_obj) {
 	
 };
 
+
 // routine to check localStorage for data
 function if_localStorage_contains_data_set_data() {
 	if (localStorage.ladybug_data) {
 		let file_content_as_text = localStorage.ladybug_data;
-    let arr = csv_string_to_array_of_objects(file_content_as_text);
-    let my_geojson_obj = arr_of_objects_into_geojson_object(arr);
+    let arr = csv_string_to_js_array_of_objects(file_content_as_text);
+    let my_geojson_obj = js_arr_of_objects_into_geojson_object(arr);
     console.log(my_geojson_obj);
 
 		map.on('load', function(e) {
@@ -226,7 +232,6 @@ function if_localStorage_contains_data_set_data() {
 		});
 	}
 }
-
 
 
 function reset_the_data_layer() {
@@ -238,70 +243,6 @@ function reset_the_data_layer() {
     map.removeLayer('textLabels');
     map.removeSource('textLabels');	 
   }
-}
-
-function csv_string_to_array_of_objects(csv_string) {
-  var data = csv_string.split(/\n/);
-  let rows = [];
-  
-  for (let i = 0; i < data.length; i++) {
-    let row = data[i].split(/,/);
-    rows.push(row);
-  }
-  
-  let arr = [];
-  for (let i = 1; i < rows.length; i++) {
-    let obj = {};
-    obj[rows[0][0]] = rows[i][0];
-    obj[rows[0][1]] = rows[i][1];
-    obj[rows[0][2]] = rows[i][2];
-    obj[rows[0][3]] = rows[i][3];
-    obj[rows[0][4]] = rows[i][4];
-    obj[rows[0][5]] = rows[i][5];
-    arr.push(obj);
-  }
-  
-  return arr;
-}
-
-function arr_of_objects_into_geojson_object(arr) {
-  let obj = {
-    'type': 'FeatureCollection',
-    'features': []
-  };
- 
-	/* 
-	 it looks like a geojson file has 2 main objects
-	 1. type
-	 2. features, which is an array containing anonymous objects (each is a location) each with 3 sub-objects
-		 1. type
-		 2. geometry
-		 3. properties
-	*/
-
-  // start iterating from 1 bc data[0] is a header row
-  for (var i = 0; i < arr.length; i++) {
-    let a = {
-      'type': 'Feature',
-      'id': i,  // added this as part of step 13
-      'geometry': {
-        'type': 'Point',
-        'coordinates': [
-          arr[i].lon,
-          arr[i].lat
-        ]
-      },
-      'properties': {
-        'rowId': i,
-        'name1': arr[i].name1,
-        'name2': arr[i].name2,
-        'name3': arr[i].name3
-      }
-    }
-    // inside the for loop, push the object a into the obj object
-    obj.features.push(a);
-  }
-  return obj;
 }
 
 
