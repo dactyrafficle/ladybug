@@ -1,241 +1,245 @@
-LAtitude,loNGitude,ISO 3166 Country Code,Country
-42.5,1.5,AD,Andorra
-24,54,AE,United Arab Emirates
-33,65,AF,Afghanistan
-17.05,-61.8,AG,Antigua and Barbuda
-18.25,-63.17,AI,Anguilla
-41,20,AL,Albania
-40,45,AM,Armenia
-12.25,-68.75,AN,Netherlands Antilles
--12.5,18.5,AO,Angola
-35,105,AP,Asia/Pacific Region
--90,0,AQ,Antarctica
--34,-64,AR,Argentina
--14.33,-170,AS,American Samoa
-47.33,13.33,AT,Austria
--27,133,AU,Australia
-12.5,-69.97,AW,Aruba
-40.5,47.5,AZ,Azerbaijan
-44,18,BA,Bosnia and Herzegovina
-13.17,-59.53,BB,Barbados
-24,90,BD,Bangladesh
-50.83,4,BE,Belgium
-13,-2,BF,Burkina Faso
-43,25,BG,Bulgaria
-26,50.55,BH,Bahrain
--3.5,30,BI,Burundi
-9.5,2.25,BJ,Benin
-32.33,-64.75,BM,Bermuda
-4.5,114.67,BN,Brunei Darussalam
--17,-65,BO,Bolivia
--10,-55,BR,Brazil
-24.25,-76,BS,Bahamas
-27.5,90.5,BT,Bhutan
--54.43,3.4,BV,Bouvet Island
--22,24,BW,Botswana
-53,28,BY,Belarus
-17.25,-88.75,BZ,Belize
-60,-95,CA,Canada
--12.5,96.83,CC,Cocos (Keeling) Islands
-0,25,CD,"Congo, The Democratic Republic of the"
-7,21,CF,Central African Republic
--1,15,CG,Congo
-47,8,CH,Switzerland
-8,-5,CI,Cote d'Ivoire
--21.23,-159.77,CK,Cook Islands
--30,-71,CL,Chile
-6,12,CM,Cameroon
-35,105,CN,China
-4,-72,CO,Colombia
-10,-84,CR,Costa Rica
-21.5,-80,CU,Cuba
-16,-24,CV,Cape Verde
--10.5,105.67,CX,Christmas Island
-35,33,CY,Cyprus
-49.75,15.5,CZ,Czech Republic
-51,9,DE,Germany
-11.5,43,DJ,Djibouti
-56,10,DK,Denmark
-15.42,-61.33,DM,Dominica
-19,-70.67,DO,Dominican Republic
-28,3,DZ,Algeria
--2,-77.5,EC,Ecuador
-59,26,EE,Estonia
-27,30,EG,Egypt
-24.5,-13,EH,Western Sahara
-15,39,ER,Eritrea
-40,-4,ES,Spain
-8,38,ET,Ethiopia
-47,8,EU,Europe
-64,26,FI,Finland
--18,175,FJ,Fiji
--51.75,-59,FK,Falkland Islands (Malvinas)
-6.92,158.25,FM,"Micronesia, Federated States of"
-62,-7,FO,Faroe Islands
-46,2,FR,France
--1,11.75,GA,Gabon
-54,-2,GB,United Kingdom
-12.12,-61.67,GD,Grenada
-42,43.5,GE,Georgia
-4,-53,GF,French Guiana
-8,-2,GH,Ghana
-36.18,-5.37,GI,Gibraltar
-72,-40,GL,Greenland
-13.47,-16.57,GM,Gambia
-11,-10,GN,Guinea
-16.25,-61.58,GP,Guadeloupe
-2,10,GQ,Equatorial Guinea
-39,22,GR,Greece
--54.5,-37,GS,South Georgia and the South Sandwich Islands
-15.5,-90.25,GT,Guatemala
-13.47,144.78,GU,Guam
-12,-15,GW,Guinea-Bissau
-5,-59,GY,Guyana
-22.25,114.17,HK,Hong Kong
--53.1,72.52,HM,Heard Island and McDonald Islands
-15,-86.5,HN,Honduras
-45.17,15.5,HR,Croatia
-19,-72.42,HT,Haiti
-47,20,HU,Hungary
--5,120,ID,Indonesia
-53,-8,IE,Ireland
-31.5,34.75,IL,Israel
-20,77,IN,India
--6,71.5,IO,British Indian Ocean Territory
-33,44,IQ,Iraq
-32,53,IR,"Iran, Islamic Republic of"
-65,-18,IS,Iceland
-42.83,12.83,IT,Italy
-18.25,-77.5,JM,Jamaica
-31,36,JO,Jordan
-36,138,JP,Japan
-1,38,KE,Kenya
-41,75,KG,Kyrgyzstan
-13,105,KH,Cambodia
-1.42,173,KI,Kiribati
--12.17,44.25,KM,Comoros
-17.33,-62.75,KN,Saint Kitts and Nevis
-40,127,KP,"Korea, Democratic People's Republic of"
-37,127.5,KR,"Korea, Republic of"
-29.34,47.66,KW,Kuwait
-19.5,-80.5,KY,Cayman Islands
-48,68,KZ,Kazakhstan
-18,105,LA,Lao People's Democratic Republic
-33.83,35.83,LB,Lebanon
-13.88,-61.13,LC,Saint Lucia
-47.17,9.53,LI,Liechtenstein
-7,81,LK,Sri Lanka
-6.5,-9.5,LR,Liberia
--29.5,28.5,LS,Lesotho
-56,24,LT,Lithuania
-49.75,6.17,LU,Luxembourg
-57,25,LV,Latvia
-25,17,LY,Libyan Arab Jamahiriya
-32,-5,MA,Morocco
-43.73,7.4,MC,Monaco
-47,29,MD,"Moldova, Republic of"
-42,19,ME,Montenegro
--20,47,MG,Madagascar
-9,168,MH,Marshall Islands
-41.83,22,MK,Macedonia
-17,-4,ML,Mali
-22,98,MM,Myanmar
-46,105,MN,Mongolia
-22.17,113.55,MO,Macao
-15.2,145.75,MP,Northern Mariana Islands
-14.67,-61,MQ,Martinique
-20,-12,MR,Mauritania
-16.75,-62.2,MS,Montserrat
-35.83,14.58,MT,Malta
--20.28,57.55,MU,Mauritius
-3.25,73,MV,Maldives
--13.5,34,MW,Malawi
-23,-102,MX,Mexico
-2.5,112.5,MY,Malaysia
--18.25,35,MZ,Mozambique
--22,17,NA,Namibia
--21.5,165.5,NC,New Caledonia
-16,8,NE,Niger
--29.03,167.95,NF,Norfolk Island
-10,8,NG,Nigeria
-13,-85,NI,Nicaragua
-52.5,5.75,NL,Netherlands
-62,10,NO,Norway
-28,84,NP,Nepal
--0.53,166.92,NR,Nauru
--19.03,-169.87,NU,Niue
--41,174,NZ,New Zealand
-21,57,OM,Oman
-9,-80,PA,Panama
--10,-76,PE,Peru
--15,-140,PF,French Polynesia
--6,147,PG,Papua New Guinea
-13,122,PH,Philippines
-30,70,PK,Pakistan
-52,20,PL,Poland
-46.83,-56.33,PM,Saint Pierre and Miquelon
-18.25,-66.5,PR,Puerto Rico
-32,35.25,PS,Palestinian Territory
-39.5,-8,PT,Portugal
-7.5,134.5,PW,Palau
--23,-58,PY,Paraguay
-25.5,51.25,QA,Qatar
--21.1,55.6,RE,Reunion
-46,25,RO,Romania
-44,21,RS,Serbia
-60,100,RU,Russian Federation
--2,30,RW,Rwanda
-25,45,SA,Saudi Arabia
--8,159,SB,Solomon Islands
--4.58,55.67,SC,Seychelles
-15,30,SD,Sudan
-62,15,SE,Sweden
-1.37,103.8,SG,Singapore
--15.93,-5.7,SH,Saint Helena
-46,15,SI,Slovenia
-78,20,SJ,Svalbard and Jan Mayen
-48.67,19.5,SK,Slovakia
-8.5,-11.5,SL,Sierra Leone
-43.77,12.42,SM,San Marino
-14,-14,SN,Senegal
-10,49,SO,Somalia
-4,-56,SR,Suriname
-1,7,ST,Sao Tome and Principe
-13.83,-88.92,SV,El Salvador
-35,38,SY,Syrian Arab Republic
--26.5,31.5,SZ,Swaziland
-21.75,-71.58,TC,Turks and Caicos Islands
-15,19,TD,Chad
--43,67,TF,French Southern Territories
-8,1.17,TG,Togo
-15,100,TH,Thailand
-39,71,TJ,Tajikistan
--9,-172,TK,Tokelau
-40,60,TM,Turkmenistan
-34,9,TN,Tunisia
--20,-175,TO,Tonga
-39,35,TR,Turkey
-11,-61,TT,Trinidad and Tobago
--8,178,TV,Tuvalu
-23.5,121,TW,Taiwan
--6,35,TZ,"Tanzania, United Republic of"
-49,32,UA,Ukraine
-1,32,UG,Uganda
-19.28,166.6,UM,United States Minor Outlying Islands
-38,-97,US,United States
--33,-56,UY,Uruguay
-41,64,UZ,Uzbekistan
-41.9,12.45,VA,Holy See (Vatican City State)
-13.25,-61.2,VC,Saint Vincent and the Grenadines
-8,-66,VE,Venezuela
-18.5,-64.5,VG,"Virgin Islands, British"
-18.33,-64.83,VI,"Virgin Islands, U.S."
-16,106,VN,Vietnam
--16,167,VU,Vanuatu
--13.3,-176.2,WF,Wallis and Futuna
--13.58,-172.33,WS,Samoa
-15,48,YE,Yemen
--12.83,45.17,YT,Mayotte
--29,24,ZA,South Africa
--15,30,ZM,Zambia
--20,30,ZW,Zimbabwe
+r,master_id,LAtitude,loNGitude,city_name,capital_city,iso_3166,country_name,sovereignty,region
+0.360238563,1,44.2031,0.6164,Agen,2,FR,France,France,EU
+0.217597143,2,39.9042,116.4074,Beijing,1,CN,China,China,ASIA
+0.746235042,3,-15.7975,-47.8919,Brasilia,1,BR,Brazil,Brazil,SA
+0.147766244,4,-35.2809,149.13,Canberra,1,AU,Australia,Australia,OCEANA
+0.003695144,17,18.3419,-64.9307,Charlotte Amalie,1,VI,US Virgin Islands,US,CARIBBEAN
+0.007771528,18,-24.6282,25.9231,Gaborone,1,BW,Botswana,Botswana,AF
+0.092226099,5,43.2557,-79.8711,Hamilton,2,CA,Canada,Canada,NA
+0.000906562,19,27.7172,85.324,Kathmandu,1,NP,Nepal,Nepal,ASIA
+0.829152902,6,38.7223,-9.1393,Lisbon,1,PT,Portugal,Portugal,EU
+0.673988934,7,51.5072,-0.1276,London,1,GB,The United Kingdom,The United Kingdom,EU
+0.65545037,8,40.4168,-3.7038,Madrid,1,ES,Spain,Spain,EU
+0.009981482,20,-29.3151,27.4869,Maseru,1,LS,Lesotho,Lesotho,AF
+0.248599207,9,19.4326,-99.1332,Mexico City,1,MX,Mexico,Mexico,NA
+0.007703097,21,-11.7172,43.2473,Moroni,1,KM,Comoros,Comoros,AF
+0.578741014,10,55.7558,37.6173,Moscow,1,RU,Russia,Russia,EURASIA
+0.97697972,11,45.4215,-75.6972,Ottawa,1,CA,Canada,Canada,NA
+0.673057329,12,48.8566,2.3522,Paris,1,FR,France,France,EU
+0.623629113,13,-23.5558,-46.6396,Sao Paulo City,1,BR,Brazil,Brazil,SA
+0.991417455,14,59.9343,30.3351,St Petersburg,1,RU,Russia,Russia,EURASIA
+0.054226622,15,35.6822,139.7605,Tokyo,1,JP,Japan,Japan,ASIA
+0.144508305,16,38.9072,-77.0369,Washington DC,1,US,The United States,The United States,NA
+0.013370033,,-22,17,,,NA,Namibia,,
+0.025292035,,47,29,,,MD,"Moldova, Republic of",,
+0.031503464,,1.37,103.8,,,SG,Singapore,,
+0.03166296,,-6,147,,,PG,Papua New Guinea,,
+0.03171183,,24.25,-76,,,BS,Bahamas,,
+0.034062798,,37,127.5,,,KR,"Korea, Republic of",,
+0.037496195,,40,127,,,KP,"Korea, Democratic People's Republic of",,
+0.049506782,,14.67,-61,,,MQ,Martinique,,
+0.05929438,,48.67,19.5,,,SK,Slovakia,,
+0.060734962,,-10,-76,,,PE,Peru,,
+0.06100803,,-8,178,,,TV,Tuvalu,,
+0.07840341,,17.25,-88.75,,,BZ,Belize,,
+0.088834904,,-16,167,,,VU,Vanuatu,,
+0.089745399,,-20.28,57.55,,,MU,Mauritius,,
+0.09257348,,17,-4,,,ML,Mali,,
+0.094926571,,-13.5,34,,,MW,Malawi,,
+0.09775598,,64,26,,,FI,Finland,,
+0.10537506,,-18.25,35,,,MZ,Mozambique,,
+0.12216937,,13,-85,,,NI,Nicaragua,,
+0.126288269,,2.5,112.5,,,MY,Malaysia,,
+0.130330824,,13.17,-59.53,,,BB,Barbados,,
+0.131265162,,4,-53,,,GF,French Guiana,,
+0.134159977,,9,168,,,MH,Marshall Islands,,
+0.134694782,,-17,-65,,,BO,Bolivia,,
+0.139169839,,34,9,,,TN,Tunisia,,
+0.142571253,,44,18,,,BA,Bosnia and Herzegovina,,
+0.149738995,,16,-24,,,CV,Cape Verde,,
+0.150634221,,42,43.5,,,GE,Georgia,,
+0.15492118,,-13.3,-176.2,,,WF,Wallis and Futuna,,
+0.155941856,,49,32,,,UA,Ukraine,,
+0.15689943,,18,105,,,LA,Lao People's Democratic Republic,,
+0.159063305,,30,70,,,PK,Pakistan,,
+0.161227226,,56,10,,,DK,Denmark,,
+0.16185211,,46,15,,,SI,Slovenia,,
+0.167711856,,16,8,,,NE,Niger,,
+0.169758049,,29.34,47.66,,,KW,Kuwait,,
+0.177306055,,47,8,,,EU,Europe,,
+0.181449345,,35,105,,,AP,Asia/Pacific Region,,
+0.185660064,,22.17,113.55,,,MO,Macao,,
+0.190652148,,15,48,,,YE,Yemen,,
+0.196434344,,15,30,,,SD,Sudan,,
+0.199153164,,9,-80,,,PA,Panama,,
+0.204911264,,39,22,,,GR,Greece,,
+0.208049718,,8,-66,,,VE,Venezuela,,
+0.211855093,,52.5,5.75,,,NL,Netherlands,,
+0.212350024,,62,-7,,,FO,Faroe Islands,,
+0.214085029,,46,25,,,RO,Romania,,
+0.214904814,,50.83,4,,,BE,Belgium,,
+0.22997713,,6,12,,,CM,Cameroon,,
+0.231504432,,19,-72.42,,,HT,Haiti,,
+0.232638107,,36.18,-5.37,,,GI,Gibraltar,,
+0.238008576,,65,-18,,,IS,Iceland,,
+0.239808134,,33,44,,,IQ,Iraq,,
+0.241863507,,42.83,12.83,,,IT,Italy,,
+0.242986149,,13.83,-88.92,,,SV,El Salvador,,
+0.243808337,,13.47,-16.57,,,GM,Gambia,,
+0.253998116,,43.77,12.42,,,SM,San Marino,,
+0.257107934,,27.5,90.5,,,BT,Bhutan,,
+0.261004792,,40,60,,,TM,Turkmenistan,,
+0.26865315,,-1,15,,,CG,Congo,,
+0.269303451,,-12.5,18.5,,,AO,Angola,,
+0.271811527,,51,9,,,DE,Germany,,
+0.281518983,,-6,35,,,TZ,"Tanzania, United Republic of",,
+0.282683836,,1.42,173,,,KI,Kiribati,,
+0.282824312,,18.25,-63.17,,,AI,Anguilla,,
+0.288952088,,32,35.25,,,PS,Palestinian Territory,,
+0.301985642,,-20,30,,,ZW,Zimbabwe,,
+0.302692517,,-15,-140,,,PF,French Polynesia,,
+0.304637901,,6.92,158.25,,,FM,"Micronesia, Federated States of",,
+0.30464067,,15,39,,,ER,Eritrea,,
+0.313278296,,57,25,,,LV,Latvia,,
+0.315005915,,28,3,,,DZ,Algeria,,
+0.320218124,,25,45,,,SA,Saudi Arabia,,
+0.320816849,,3.25,73,,,MV,Maldives,,
+0.327090412,,72,-40,,,GL,Greenland,,
+0.32856804,,14,-14,,,SN,Senegal,,
+0.343967108,,-1,11.75,,,GA,Gabon,,
+0.34591672,,18.25,-66.5,,,PR,Puerto Rico,,
+0.361727383,,10,-84,,,CR,Costa Rica,,
+0.364966203,,32.33,-64.75,,,BM,Bermuda,,
+0.366465367,,20,-12,,,MR,Mauritania,,
+0.390357666,,-90,0,,,AQ,Antarctica,,
+0.392387585,,-20,47,,,MG,Madagascar,,
+0.401157645,,35.83,14.58,,,MT,Malta,,
+0.40255154,,15.2,145.75,,,MP,Northern Mariana Islands,,
+0.404858567,,32,53,,,IR,"Iran, Islamic Republic of",,
+0.406435925,,-53.1,72.52,,,HM,Heard Island and McDonald Islands,,
+0.409733093,,-9,-172,,,TK,Tokelau,,
+0.418889582,,25,17,,,LY,Libyan Arab Jamahiriya,,
+0.425321906,,19.28,166.6,,,UM,United States Minor Outlying Islands,,
+0.42932148,,42,19,,,ME,Montenegro,,
+0.437426256,,17.33,-62.75,,,KN,Saint Kitts and Nevis,,
+0.440191165,,13.47,144.78,,,GU,Guam,,
+0.445736245,,18.5,-64.5,,,VG,"Virgin Islands, British",,
+0.446391248,,10,49,,,SO,Somalia,,
+0.451179947,,24,54,,,AE,United Arab Emirates,,
+0.451960349,,13,-2,,,BF,Burkina Faso,,
+0.455567824,,53,-8,,,IE,Ireland,,
+0.462879455,,-0.53,166.92,,,NR,Nauru,,
+0.470910517,,4.5,114.67,,,BN,Brunei Darussalam,,
+0.472014879,,15,19,,,TD,Chad,,
+0.473780003,,6.5,-9.5,,,LR,Liberia,,
+0.477756384,,-2,-77.5,,,EC,Ecuador,,
+0.478376114,,-54.5,-37,,,GS,South Georgia and the South Sandwich Islands,,
+0.480004263,,11,-61,,,TT,Trinidad and Tobago,,
+0.482987875,,7.5,134.5,,,PW,Palau,,
+0.491549699,,-5,120,,,ID,Indonesia,,
+0.496684037,,25.5,51.25,,,QA,Qatar,,
+0.501419531,,7,81,,,LK,Sri Lanka,,
+0.504374971,,12.5,-69.97,,,AW,Aruba,,
+0.507910461,,8,1.17,,,TG,Togo,,
+0.50896493,,-30,-71,,,CL,Chile,,
+0.509083902,,-6,71.5,,,IO,British Indian Ocean Territory,,
+0.510555042,,12.25,-68.75,,,AN,Netherlands Antilles,,
+0.520764191,,39,71,,,TJ,Tajikistan,,
+0.521172252,,46.83,-56.33,,,PM,Saint Pierre and Miquelon,,
+0.52127058,,41,20,,,AL,Albania,,
+0.524675686,,22,98,,,MM,Myanmar,,
+0.527160472,,-10.5,105.67,,,CX,Christmas Island,,
+0.530566404,,-15.93,-5.7,,,SH,Saint Helena,,
+0.533363224,,41,75,,,KG,Kyrgyzstan,,
+0.539514018,,8.5,-11.5,,,SL,Sierra Leone,,
+0.543039173,,48,68,,,KZ,Kazakhstan,,
+0.543463793,,27,30,,,EG,Egypt,,
+0.55108048,,21,57,,,OM,Oman,,
+0.5560789,,21.5,-80,,,CU,Cuba,,
+0.560055258,,39,35,,,TR,Turkey,,
+0.560439191,,22.25,114.17,,,HK,Hong Kong,,
+0.563948514,,-13.58,-172.33,,,WS,Samoa,,
+0.568610706,,17.05,-61.8,,,AG,Antigua and Barbuda,,
+0.575750916,,1,7,,,ST,Sao Tome and Principe,,
+0.581300165,,62,10,,,NO,Norway,,
+0.582385719,,-2,30,,,RW,Rwanda,,
+0.586792756,,41,64,,,UZ,Uzbekistan,,
+0.588500666,,20,77,,,IN,India,,
+0.591768774,,59,26,,,EE,Estonia,,
+0.61929562,,0,25,,,CD,"Congo, The Democratic Republic of the",,
+0.620071746,,52,20,,,PL,Poland,,
+0.620441721,,-15,30,,,ZM,Zambia,,
+0.626552435,,12.12,-61.67,,,GD,Grenada,,
+0.627206488,,-8,159,,,SB,Solomon Islands,,
+0.630810976,,46,105,,,MN,Mongolia,,
+0.635175963,,-12.5,96.83,,,CC,Cocos (Keeling) Islands,,
+0.638597082,,13,122,,,PH,Philippines,,
+0.639726637,,49.75,6.17,,,LU,Luxembourg,,
+0.64101609,,7,21,,,CF,Central African Republic,,
+0.644377134,,2,10,,,GQ,Equatorial Guinea,,
+0.65207937,,-41,174,,,NZ,New Zealand,,
+0.653950402,,44,21,,,RS,Serbia,,
+0.668438336,,24.5,-13,,,EH,Western Sahara,,
+0.672267854,,-12.83,45.17,,,YT,Mayotte,,
+0.677616462,,16.25,-61.58,,,GP,Guadeloupe,,
+0.67810714,,42.5,1.5,,,AD,Andorra,,
+0.681838881,,40.5,47.5,,,AZ,Azerbaijan,,
+0.683394202,,19.5,-80.5,,,KY,Cayman Islands,,
+0.696295177,,19,-70.67,,,DO,Dominican Republic,,
+0.699008549,,-54.43,3.4,,,BV,Bouvet Island,,
+0.702043212,,53,28,,,BY,Belarus,,
+0.703936854,,10,8,,,NG,Nigeria,,
+0.706007176,,41.9,12.45,,,VA,Holy See (Vatican City State),,
+0.707483332,,31,36,,,JO,Jordan,,
+0.709158547,,-21.5,165.5,,,NC,New Caledonia,,
+0.713907669,,11.5,43,,,DJ,Djibouti,,
+0.714022834,,-51.75,-59,,,FK,Falkland Islands (Malvinas),,
+0.716322839,,15,100,,,TH,Thailand,,
+0.734355983,,-21.23,-159.77,,,CK,Cook Islands,,
+0.735766406,,47.17,9.53,,,LI,Liechtenstein,,
+0.740940076,,-3.5,30,,,BI,Burundi,,
+0.745195645,,-23,-58,,,PY,Paraguay,,
+0.74793392,,62,15,,,SE,Sweden,,
+0.751147286,,31.5,34.75,,,IL,Israel,,
+0.751890762,,1,32,,,UG,Uganda,,
+0.757173617,,47.33,13.33,,,AT,Austria,,
+0.761788103,,13,105,,,KH,Cambodia,,
+0.768541593,,15,-86.5,,,HN,Honduras,,
+0.774134203,,-21.1,55.6,,,RE,Reunion,,
+0.781246515,,9.5,2.25,,,BJ,Benin,,
+0.788691541,,33.83,35.83,,,LB,Lebanon,,
+0.791225336,,-33,-56,,,UY,Uruguay,,
+0.79249995,,-4.58,55.67,,,SC,Seychelles,,
+0.795986117,,13.25,-61.2,,,VC,Saint Vincent and the Grenadines,,
+0.797041005,,-26.5,31.5,,,SZ,Swaziland,,
+0.816697786,,8,-5,,,CI,Cote d'Ivoire,,
+0.830642492,,49.75,15.5,,,CZ,Czech Republic,,
+0.836372988,,21.75,-71.58,,,TC,Turks and Caicos Islands,,
+0.837261284,,1,38,,,KE,Kenya,,
+0.838293566,,-20,-175,,,TO,Tonga,,
+0.849802784,,45.17,15.5,,,HR,Croatia,,
+0.851947449,,56,24,,,LT,Lithuania,,
+0.860310648,,13.88,-61.13,,,LC,Saint Lucia,,
+0.865840114,,-29,24,,,ZA,South Africa,,
+0.868066946,,40,45,,,AM,Armenia,,
+0.87014382,,35,33,,,CY,Cyprus,,
+0.871368582,,47,8,,,CH,Switzerland,,
+0.87234015,,43,25,,,BG,Bulgaria,,
+0.883277614,,16.75,-62.2,,,MS,Montserrat,,
+0.883525399,,41.83,22,,,MK,Macedonia,,
+0.89009884,,33,65,,,AF,Afghanistan,,
+0.894849917,,35,38,,,SY,Syrian Arab Republic,,
+0.901350612,,24,90,,,BD,Bangladesh,,
+0.90142249,,23.5,121,,,TW,Taiwan,,
+0.901435955,,16,106,,,VN,Vietnam,,
+0.903056844,,4,-56,,,SR,Suriname,,
+0.912143034,,-18,175,,,FJ,Fiji,,
+0.914574604,,15.42,-61.33,,,DM,Dominica,,
+0.920609435,,78,20,,,SJ,Svalbard and Jan Mayen,,
+0.922770026,,32,-5,,,MA,Morocco,,
+0.923961165,,-43,67,,,TF,French Southern Territories,,
+0.924268087,,12,-15,,,GW,Guinea-Bissau,,
+0.92822017,,18.25,-77.5,,,JM,Jamaica,,
+0.928295082,,-19.03,-169.87,,,NU,Niue,,
+0.932202298,,15.5,-90.25,,,GT,Guatemala,,
+0.933945896,,26,50.55,,,BH,Bahrain,,
+0.936014222,,8,-2,,,GH,Ghana,,
+0.939113174,,8,38,,,ET,Ethiopia,,
+0.946845912,,11,-10,,,GN,Guinea,,
+0.949347949,,5,-59,,,GY,Guyana,,
+0.950066963,,-14.33,-170,,,AS,American Samoa,,
+0.965319972,,47,20,,,HU,Hungary,,
+0.97203624,,-29.03,167.95,,,NF,Norfolk Island,,
+0.983296426,,43.73,7.4,,,MC,Monaco,,
+0.987668232,,4,-72,,,CO,Colombia,,
+0.991266245,,-34,-64,,,AR,Argentina,,

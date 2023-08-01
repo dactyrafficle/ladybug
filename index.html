@@ -2,16 +2,16 @@
 <html>
 
 <head>
-
-
-  <script src='./csv_string_to_js_array_of_objects.js'></script>
+  <script src='./csv_string_to_js_array_of_anon_objects.js'></script>
   <script src='./js_arr_of_objects_into_geojson_object.js'></script>
 
 	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.js'></script>
 	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.css' rel='stylesheet' />
-	<link href='ladybug.css' rel='stylesheet' />
-	<style></style>
 	
+  <link rel="stylesheet" href="./_includes/_stylesheet.css">
+  <link rel="icon" href="./_includes/_favicon.png"> 
+  
+  <title> points &middot; </title>
 </head>
 
 <body>
@@ -24,7 +24,7 @@
 		<div class='hamburger-contents'></div>
 	</div>
 	
-	<div id='modal' class='modal' style='font-size: 20px; font-family: calibri;'>
+	<div id='modal' class='modal' style='border: 2px solid #47ca; font-size: 20px; font-family: calibri;'>
   
     <div class='outer'>
     
@@ -47,6 +47,9 @@
         </table>
        
        <p> the first row of the csv file must be its row headers and it must contain at least 2 values : 'latitude' and 'longitude'. </p>
+       <p> letter case doesnt matter. </p>
+       <p> latitude : north is positive </p>
+       <p> longitude : east is positive </p>
        <p> it doesnt matter which column they are in, but those 2 values must be present </p>
        
       </div>

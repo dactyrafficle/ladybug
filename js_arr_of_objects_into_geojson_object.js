@@ -29,9 +29,9 @@ function js_arr_of_objects_into_geojson_object(arr) {
       },
       'properties': {
         'rowId': i,
-        'name1': arr[i].name1,
-        'name2': arr[i].name2,
-        'name3': arr[i].name3
+        'city_name':arr[i].city_name,
+        'country_name':arr[i].country_name,
+        'name3':arr[i].name3
       }
     }
     // inside the for loop, push the object a into the obj object

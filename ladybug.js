@@ -99,6 +99,7 @@ container.addEventListener('dragleave', function(e) {
   this.style.border = '1px solid #222';
 }, false);
 
+// DROP EVENT LISTENER
 container.addEventListener('drop', function(e) {
   
   e.stopPropagation();
@@ -119,7 +120,7 @@ container.addEventListener('drop', function(e) {
     localStorage.ladybug_data = file_contents_as_text;
     
     // returns an array of objects
-    let arr = csv_string_to_js_array_of_objects(file_contents_as_text);
+    let arr = csv_string_to_js_array_of_anon_objects(file_contents_as_text);
     // console.log(arr);  // the parsed js array of objects
     
     // returns a geojson obj
@@ -135,7 +136,9 @@ container.addEventListener('drop', function(e) {
   /* 3. use the fileReader object to read the file, and return a string */
   reader.readAsText(e.dataTransfer.files[0]); 
 
- }, false);
+ }, false);  // CLOSING DROP EVENT LISTENER
+ 
+ 
 
 // function definitions below:
 
@@ -156,8 +159,16 @@ function add_my_layer_to_the_map(my_geojson_obj) {
 				'base': 4,
 				'stops': [[4, 4.25], [12, 14]] // circles get bigger between z3 and z14
 			},
-			'circle-color': '#FF6EC7',
-			'circle-opacity': 0.6
+			'circle-color':[
+        'match',
+        ['get', 'city_name'],
+        'Hamilton',
+        '#4477cc',
+        'SA',
+        '#223b53',
+        /* other */ '#FF6EC7'
+      ],
+			'circle-opacity':0.6
 		}
 	});
 	
@@ -222,7 +233,7 @@ function add_my_layer_to_the_map(my_geojson_obj) {
 function if_localStorage_contains_data_set_data() {
 	if (localStorage.ladybug_data) {
 		let file_content_as_text = localStorage.ladybug_data;
-    let arr = csv_string_to_js_array_of_objects(file_content_as_text);
+    let arr = csv_string_to_js_array_of_anon_objects(file_content_as_text);
     let my_geojson_obj = js_arr_of_objects_into_geojson_object(arr);
     console.log(my_geojson_obj);
 
