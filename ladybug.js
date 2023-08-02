@@ -121,11 +121,9 @@ container.addEventListener('drop', function(e) {
     
     // returns an array of objects
     let arr = csv_string_to_js_array_of_anon_objects(file_contents_as_text);
-    // console.log(arr);  // the parsed js array of objects
     
-    // returns a geojson obj
+    // RETURNS A GEOJSON OBJ
     let my_geojson_obj = js_arr_of_objects_into_geojson_object(arr);
-    console.log(my_geojson_obj);  // the geojson object
     
     reset_the_data_layer();
     add_my_layer_to_the_map(my_geojson_obj);	
@@ -144,6 +142,7 @@ container.addEventListener('drop', function(e) {
 
 // this function will add a layer [an array of geojson data] to the map
 function add_my_layer_to_the_map(my_geojson_obj) {
+
 	map.addLayer({
 		id: 'locations',
 		type: 'circle',
@@ -164,15 +163,25 @@ function add_my_layer_to_the_map(my_geojson_obj) {
         ['get', 'city_name'],
         'Hamilton',
         '#4477cc',
-        'SA',
-        '#223b53',
-        /* other */ '#FF6EC7'
+        [
+         'match',
+         ['get', 'region'],
+         'AF',
+         '#44cc33',
+         '#FF6EC7'
+        ]
       ],
-			'circle-opacity':0.6
+			'circle-opacity':[
+        'match',
+        ['get', 'city_name'],
+        'Hamilton',
+        0.95,
+        0.6
+      ],
 		}
 	});
 	
-	
+
 	map.addLayer({
 		id: 'textLabels',
 		type: 'symbol',
